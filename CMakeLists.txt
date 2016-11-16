@@ -8,6 +8,12 @@
 
 cmake_minimum_required(VERSION 3.2.0)
 
+include("cmake/HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.16.30.tar.gz"
+    SHA1 "c5b159b48a3a842697f08fe2a72464adfd78a55d"
+)
+
 project(Poco)
 
 set(CMAKE_C_STANDARD 11)
