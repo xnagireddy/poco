@@ -17,6 +17,7 @@ POCO_HEADERS_AUTO( SRCS ${HDRS_G})
 # If POCO_UNBUNDLED is enabled we try to find the required packages
 # The configuration will fail if the packages are not found
 if (POCO_UNBUNDLED)
+    hunter_add_package(Expat)
     find_package(EXPAT REQUIRED)
     set(SYSLIBS ${SYSLIBS} ${EXPAT_LIBRARIES})
     include_directories(${EXPAT_INCLUDE_DIRS})
